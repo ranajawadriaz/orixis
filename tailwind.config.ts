@@ -68,6 +68,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				orixis: {
+					bg: 'rgb(var(--orixis-bg) / <alpha-value>)',
+					'bg-secondary': 'rgb(var(--orixis-bg-secondary) / <alpha-value>)',
+					text: 'rgb(var(--orixis-text) / <alpha-value>)',
+					'text-muted': 'rgb(var(--orixis-text-muted) / <alpha-value>)',
 					blue: '#0F172A',
 					'blue-light': '#1E293B',
 					teal: '#0D9488',
