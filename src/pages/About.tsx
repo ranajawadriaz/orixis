@@ -10,53 +10,53 @@ const About = () => {
     {
       name: 'Alex Chen',
       position: 'CEO & Co-Founder',
-      bio: 'Former Google engineer with 15+ years experience in AI and machine learning.',
+      bio: 'Former Google engineer with 15+ years experience in agentic AI, machine learning, and autonomous systems.',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-      expertise: ['AI/ML', 'Strategy', 'Leadership']
+      expertise: ['Agentic AI', 'Strategy', 'Leadership']
     },
     {
       name: 'Sarah Martinez',
       position: 'CTO & Co-Founder',
-      bio: 'Ex-Amazon architect specializing in scalable systems and cloud infrastructure.',
+      bio: 'Ex-Amazon architect specializing in autonomous systems, scalable infrastructure, and AI agent orchestration.',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b789?w=400&h=400&fit=crop&crop=face',
-      expertise: ['Cloud Architecture', 'DevOps', 'Full-Stack']
+      expertise: ['AI Agents', 'DevOps', 'Full-Stack']
     },
     {
       name: 'David Kim',
-      position: 'Head of AI',
-      bio: 'PhD in Computer Science, published researcher in deep learning and NLP.',
+      position: 'Head of Agentic AI',
+      bio: 'PhD in Computer Science, published researcher in autonomous agents, deep learning, and multi-agent systems.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
-      expertise: ['Deep Learning', 'NLP', 'Research']
+      expertise: ['Autonomous Agents', 'NLP', 'Research']
     },
     {
       name: 'Emily Johnson',
       position: 'Head of Design',
-      bio: 'Award-winning UX designer with expertise in creating intuitive digital experiences.',
+      bio: 'Award-winning UX designer with expertise in creating intuitive interfaces for AI-powered and autonomous systems.',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
-      expertise: ['UX Design', 'Product Design', 'User Research']
+      expertise: ['AI UX Design', 'Product Design', 'User Research']
     },
   ];
 
   const values = [
     {
       icon: Target,
-      title: 'Innovation First',
-      description: 'We constantly push boundaries and embrace cutting-edge technologies to deliver breakthrough solutions.'
+      title: 'Autonomous Innovation',
+      description: 'We constantly push boundaries with agentic AI and autonomous systems to deliver breakthrough solutions that work independently.'
     },
     {
       icon: Users,
       title: 'Client Success',
-      description: 'Your success is our success. We\'re committed to delivering exceptional value and building lasting partnerships.'
+      description: 'Your success is our success. We deploy AI agents that work 24/7 to ensure your business objectives are continuously met.'
     },
     {
       icon: Heart,
-      title: 'Quality Excellence',
-      description: 'We maintain the highest standards in everything we do, from code quality to user experience.'
+      title: 'Excellence in Automation',
+      description: 'We maintain the highest standards in autonomous system design, from AI agent performance to user experience.'
     },
     {
       icon: Globe,
-      title: 'Global Impact',
-      description: 'We believe technology should make the world a better place, creating solutions that matter.'
+      title: 'Global Autonomous Impact',
+      description: 'We believe autonomous AI should make the world better, creating self-improving solutions that scale globally.'
     },
   ];
 
@@ -64,37 +64,37 @@ const About = () => {
     {
       year: '2019',
       title: 'Company Founded',
-      description: 'Orixis was established with a vision to transform businesses through AI and innovative technology.'
+      description: 'Orixis was established with a vision to transform businesses through autonomous AI agents and agentic technology.'
     },
     {
       year: '2020',
-      title: 'First AI Product',
-      description: 'Launched our first AI-powered automation platform, revolutionizing customer support workflows.'
+      title: 'First AI Agent Platform',
+      description: 'Launched our first autonomous AI agent platform, revolutionizing customer support with 24/7 automation.'
     },
     {
       year: '2021',
       title: 'Series A Funding',
-      description: 'Secured $5M in Series A funding to accelerate product development and team expansion.'
+      description: 'Secured $5M in Series A funding to accelerate agentic AI development and autonomous system deployment.'
     },
     {
       year: '2022',
-      title: '100+ Clients',
-      description: 'Reached milestone of serving over 100 clients across various industries worldwide.'
+      title: '100+ Autonomous Deployments',
+      description: 'Reached milestone of deploying autonomous AI agents for over 100 clients across various industries worldwide.'
     },
     {
       year: '2023',
-      title: 'AI Research Lab',
-      description: 'Established dedicated AI research lab to advance machine learning and automation technologies.'
+      title: 'Agentic AI Research Lab',
+      description: 'Established dedicated research lab to advance autonomous agent technology and multi-agent system orchestration.'
     },
     {
       year: '2024',
-      title: 'Global Expansion',
-      description: 'Expanded operations to serve clients in North America, Europe, and Asia-Pacific regions.'
+      title: 'Global Agent Network',
+      description: 'Expanded operations to deploy autonomous AI agents serving clients in North America, Europe, and Asia-Pacific.'
     },
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Delivered' },
+    { number: '500+', label: 'AI Agents Deployed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '50+', label: 'Team Members' },
     { number: '15+', label: 'Countries Served' },
@@ -103,14 +103,15 @@ const About = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-orixis-blue via-orixis-blue-light to-orixis-purple/20">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 overflow-hidden hero-section">
+        <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-orixis-blue dark:via-orixis-blue-light dark:to-orixis-purple/20" />
+        <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-orixis-text">
               About <span className="gradient-text">Orixis</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-8">
-              We're a team of innovators, engineers, and visionaries dedicated to transforming businesses through the power of artificial intelligence and cutting-edge technology.
+            <p className="text-xl md:text-2xl text-orixis-text-muted mb-8">
+              We're a team of innovators, engineers, and visionaries dedicated to transforming businesses through autonomous AI agents and cutting-edge agentic technology.
             </p>
             <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-white">
               <Link to="/careers" className="flex items-center">
@@ -120,6 +121,11 @@ const About = () => {
             </Button>
           </div>
         </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-orixis-teal/20 rounded-full animate-float" />
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-orixis-purple/20 rounded-full animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 right-20 w-12 h-12 bg-orixis-teal/30 rounded-full animate-float" style={{ animationDelay: '4s' }} />
       </section>
 
       {/* Mission & Vision */}
@@ -127,55 +133,55 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <Card className="bg-gradient-card border-white/10 hover-lift">
+              <Card className="theme-card hover-lift">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4">
                       <Target className="text-white" size={24} />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">Our Mission</h3>
+                    <h3 className="text-2xl font-bold text-orixis-text">Our Mission</h3>
                   </div>
-                  <p className="text-white/70 text-lg">
-                    To democratize artificial intelligence and make cutting-edge technology accessible to businesses of all sizes, 
-                    enabling them to innovate, grow, and create meaningful impact in their industries.
+                  <p className="text-orixis-text-muted text-lg">
+                    To democratize autonomous AI agents and make cutting-edge agentic technology accessible to businesses of all sizes, 
+                    enabling them to innovate, automate, and create meaningful impact through intelligent automation.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-card border-white/10 hover-lift">
+              <Card className="theme-card hover-lift">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4">
                       <Eye className="text-white" size={24} />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">Our Vision</h3>
+                    <h3 className="text-2xl font-bold text-orixis-text">Our Vision</h3>
                   </div>
-                  <p className="text-white/70 text-lg">
-                    To be the world's leading technology partner, known for creating intelligent solutions that drive business 
-                    transformation and positive societal impact through innovation and excellence.
+                  <p className="text-orixis-text-muted text-lg">
+                    To be the world's leading autonomous technology partner, known for creating intelligent AI agents that drive business 
+                    transformation and positive societal impact through autonomous innovation and excellence.
                   </p>
                 </CardContent>
               </Card>
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-display font-bold">
-                Engineering the <span className="gradient-text">Future</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-orixis-text">
+                Engineering the <span className="gradient-text">Autonomous Future</span>
               </h2>
-              <p className="text-white/70 text-lg">
-                Since our founding in 2019, Orixis has been at the forefront of technological innovation. We've helped hundreds 
-                of companies transform their operations through AI, machine learning, and intelligent automation.
+              <p className="text-orixis-text-muted text-lg">
+                Since our founding in 2019, Orixis has been at the forefront of agentic AI innovation. We've helped hundreds 
+                of companies transform their operations through autonomous AI agents, intelligent automation, and self-improving systems.
               </p>
-              <p className="text-white/70 text-lg">
-                Our multidisciplinary team combines deep technical expertise with creative problem-solving to deliver solutions 
-                that not only meet today's challenges but anticipate tomorrow's opportunities.
+              <p className="text-orixis-text-muted text-lg">
+                Our multidisciplinary team combines deep expertise in autonomous systems with creative problem-solving to deliver AI agents 
+                that not only meet today's challenges but autonomously adapt to tomorrow's opportunities.
               </p>
               
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-3xl font-bold gradient-text mb-2">{stat.number}</div>
-                    <div className="text-white/70">{stat.label}</div>
+                    <div className="text-orixis-text-muted">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -185,26 +191,26 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-gradient-to-b from-orixis-blue-light/50 to-transparent">
+      <section className="py-20 bg-gradient-to-b from-orixis-bg-secondary/50 to-transparent">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-orixis-text">
               Our <span className="gradient-text">Values</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              The principles that guide everything we do and define who we are as a company.
+            <p className="text-xl text-orixis-text-muted max-w-2xl mx-auto">
+              The principles that guide everything we do and define who we are as pioneers in autonomous AI technology.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="bg-gradient-card border-white/10 text-center hover-lift">
+              <Card key={index} className="theme-card text-center hover-lift">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                     <value.icon className="text-white" size={32} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
-                  <p className="text-white/70">{value.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-orixis-text">{value.title}</h3>
+                  <p className="text-orixis-text-muted">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -216,11 +222,11 @@ const About = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-orixis-text">
               Our <span className="gradient-text">Journey</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Key milestones that have shaped our growth and success over the years.
+            <p className="text-xl text-orixis-text-muted max-w-2xl mx-auto">
+              Key milestones in our evolution from startup to leading autonomous AI technology company.
             </p>
           </div>
           
@@ -230,15 +236,15 @@ const About = () => {
               {milestones.map((milestone, index) => (
                 <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <Card className="bg-gradient-card border-white/10 hover-lift">
+                    <Card className="theme-card hover-lift">
                       <CardContent className="p-6">
                         <div className="text-2xl font-bold gradient-text mb-2">{milestone.year}</div>
-                        <h3 className="text-xl font-semibold mb-2 text-white">{milestone.title}</h3>
-                        <p className="text-white/70">{milestone.description}</p>
+                        <h3 className="text-xl font-semibold mb-2 text-orixis-text">{milestone.title}</h3>
+                        <p className="text-orixis-text-muted">{milestone.description}</p>
                       </CardContent>
                     </Card>
                   </div>
-                  <div className="w-6 h-6 bg-gradient-primary rounded-full border-4 border-orixis-blue relative z-10"></div>
+                  <div className="w-6 h-6 bg-gradient-primary rounded-full border-4 border-orixis-bg relative z-10"></div>
                   <div className="w-1/2"></div>
                 </div>
               ))}
@@ -248,20 +254,20 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-gradient-to-b from-orixis-blue-light/50 to-transparent">
+      <section className="py-20 bg-gradient-to-b from-orixis-bg-secondary/50 to-transparent">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-orixis-text">
               Meet Our <span className="gradient-text">Team</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              The brilliant minds behind Orixis, bringing together diverse expertise and shared passion for innovation.
+            <p className="text-xl text-orixis-text-muted max-w-2xl mx-auto">
+              The brilliant minds behind Orixis, bringing together diverse expertise and shared passion for autonomous AI innovation.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <Card key={index} className="bg-gradient-card border-white/10 overflow-hidden hover-lift group">
+              <Card key={index} className="theme-card overflow-hidden hover-lift group">
                 <div className="aspect-square overflow-hidden">
                   <img 
                     src={member.image} 
@@ -270,12 +276,12 @@ const About = () => {
                   />
                 </div>
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-orixis-text mb-1">{member.name}</h3>
                   <p className="text-orixis-teal mb-3">{member.position}</p>
-                  <p className="text-white/70 text-sm mb-4">{member.bio}</p>
+                  <p className="text-orixis-text-muted text-sm mb-4">{member.bio}</p>
                   <div className="flex flex-wrap justify-center gap-2">
                     {member.expertise.map((skill, idx) => (
-                      <Badge key={idx} variant="secondary" className="bg-white/10 text-white text-xs">
+                      <Badge key={idx} variant="secondary" className="bg-orixis-text/10 text-orixis-text text-xs">
                         {skill}
                       </Badge>
                     ))}
@@ -296,7 +302,7 @@ const About = () => {
                 Want to Join Our Mission?
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                We're always looking for talented individuals who share our passion for innovation and excellence.
+                We're always looking for talented individuals who share our passion for autonomous AI innovation and excellence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90">

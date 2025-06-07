@@ -143,4 +143,18 @@
   .dark .theme-card {
     @apply bg-gradient-card border-white/10;
   }
+  
+  /* Float animation for decorative elements */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
 }
