@@ -34,11 +34,13 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Light mode Orixis colors */
+    /* Light mode Orixis colors - improved contrast */
     --orixis-bg: 255 255 255;
     --orixis-bg-secondary: 248 250 252;
     --orixis-text: 15 23 42;
-    --orixis-text-muted: 100 116 139;
+    --orixis-text-muted: 71 85 105;
+    --orixis-hero-bg: 248 250 252;
+    --orixis-card-bg: 255 255 255;
   }
 
   .dark {
@@ -75,6 +77,8 @@
     --orixis-bg-secondary: 30 41 59;
     --orixis-text: 248 250 252;
     --orixis-text-muted: 148 163 184;
+    --orixis-hero-bg: 15 23 42;
+    --orixis-card-bg: 30 41 59;
   }
 }
 
@@ -120,5 +124,23 @@
   
   .subheading-responsive {
     @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  /* Theme-adaptive hero section */
+  .hero-section {
+    @apply bg-gradient-to-br from-orixis-hero-bg via-orixis-bg-secondary to-orixis-bg;
+  }
+
+  .dark .hero-section {
+    @apply from-orixis-blue via-orixis-blue-light to-orixis-purple/20;
+  }
+
+  /* Theme-adaptive card backgrounds */
+  .theme-card {
+    @apply bg-orixis-card-bg border border-orixis-text/10;
+  }
+
+  .dark .theme-card {
+    @apply bg-gradient-card border-white/10;
   }
 }

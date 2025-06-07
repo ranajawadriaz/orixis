@@ -59,15 +59,15 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orixis-blue via-orixis-blue-light to-orixis-purple/20" />
+      <section className="relative pt-20 pb-16 overflow-hidden hero-section">
+        <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-orixis-blue dark:via-orixis-blue-light dark:to-orixis-purple/20" />
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-orixis-text">
               Engineering the Future with{' '}
               <span className="gradient-text">AI, Web & Mobile</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-orixis-text-muted mb-8 max-w-3xl mx-auto">
               Transform your business with cutting-edge technology solutions. We build intelligent, scalable platforms that drive growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -75,7 +75,7 @@ const Index = () => {
                 Build With Orixis
                 <ArrowRight className="ml-2" size={20} />
               </Button>
-              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg">
+              <Button variant="outline" size="lg" className="border-orixis-text/30 text-orixis-text hover:bg-orixis-text/10 px-8 py-6 text-lg">
                 Explore Our AI Products
               </Button>
             </div>
@@ -89,27 +89,27 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gradient-to-b from-transparent to-orixis-blue-light/50">
+      <section className="py-20 bg-gradient-to-b from-transparent to-orixis-bg-secondary/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-orixis-text">
               Our <span className="gradient-text">Services</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-orixis-text-muted max-w-2xl mx-auto">
               We deliver comprehensive technology solutions that propel your business forward.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="bg-gradient-card border-white/10 hover-lift group">
+              <Card key={index} className="theme-card hover-lift group">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:animate-glow">
                     <service.icon className="text-white" size={32} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
-                  <p className="text-white/70 mb-4">{service.description}</p>
-                  <Button variant="ghost" className="text-orixis-teal hover:text-orixis-teal-light">
+                  <h3 className="text-xl font-semibold mb-3 text-orixis-text">{service.title}</h3>
+                  <p className="text-orixis-text-muted mb-4">{service.description}</p>
+                  <Button variant="ghost" className="text-orixis-teal hover:text-orixis-teal-light hover:bg-orixis-teal/10">
                     Learn More <ArrowRight size={16} className="ml-1" />
                   </Button>
                 </CardContent>
@@ -126,7 +126,7 @@ const Index = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">{stat.number}</div>
-                <div className="text-white/70">{stat.label}</div>
+                <div className="text-orixis-text-muted">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -134,29 +134,29 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-b from-orixis-blue-light/50 to-transparent">
+      <section className="py-20 bg-gradient-to-b from-orixis-bg-secondary/50 to-transparent">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-orixis-text">
               What Our <span className="gradient-text">Clients Say</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-orixis-text-muted max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about working with Orixis.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-gradient-card border-white/10 hover-lift">
+              <Card key={index} className="theme-card hover-lift">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="text-yellow-400 fill-current" size={20} />
                     ))}
                   </div>
-                  <p className="text-white/80 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-orixis-text-muted mb-4 italic">"{testimonial.content}"</p>
                   <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="font-semibold text-orixis-text">{testimonial.name}</div>
                     <div className="text-orixis-teal text-sm">{testimonial.company}</div>
                   </div>
                 </CardContent>

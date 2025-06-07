@@ -72,6 +72,8 @@ export default {
 					'bg-secondary': 'rgb(var(--orixis-bg-secondary) / <alpha-value>)',
 					text: 'rgb(var(--orixis-text) / <alpha-value>)',
 					'text-muted': 'rgb(var(--orixis-text-muted) / <alpha-value>)',
+					'hero-bg': 'rgb(var(--orixis-hero-bg) / <alpha-value>)',
+					'card-bg': 'rgb(var(--orixis-card-bg) / <alpha-value>)',
 					blue: '#0F172A',
 					'blue-light': '#1E293B',
 					teal: '#0D9488',
