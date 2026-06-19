@@ -21,17 +21,19 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('theme') as Theme;
-      return stored || 'dark';
+      const stored = localStorage.getItem('orixis-theme') as Theme | null;
+      // Light is the default experience; returning visitors keep their choice.
+      return stored === 'dark' || stored === 'light' ? stored : 'light';
     }
-    return 'dark';
+    return 'light';
   });
 
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
     root.classList.add(theme);
-    localStorage.setItem('theme', theme);
+    root.style.colorScheme = theme;
+    localStorage.setItem('orixis-theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

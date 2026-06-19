@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Environment files (keep secrets out of git; commit .env.example instead)
+.env
+.env.*
+!.env.example
+
+# Source 3D asset packs — the app only ships public/robot/RobotAnimated.fbx.
+# Kept out of git so they don't bloat the repo (asset-ripper is ~1.2 GB).
+/robot/
+/asset-ripper/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

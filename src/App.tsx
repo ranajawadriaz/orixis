@@ -1,46 +1,43 @@
-
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import MuiThemeBridge from "@/theme/MuiThemeBridge";
+import ScrollToTop from "@/components/ScrollToTop";
+import AnimatedRoutes from "@/components/AnimatedRoutes";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Index from "./pages/Index";
-import Services from "./pages/Services";
-import Products from "./pages/Products";
-import CaseStudies from "./pages/CaseStudies";
-import About from "./pages/About";
-import Careers from "./pages/Careers";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+
+// Deferred so its Material UI dependency stays out of the initial bundle.
+const Chatbot = lazy(() => import("./components/Chatbot"));
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <div className="min-h-screen bg-orixis-bg text-orixis-text">
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </TooltipProvider>
+      <MuiThemeBridge>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <div className="min-h-screen bg-orixis-bg text-orixis-text">
+              <Navbar />
+              <main>
+                <AnimatedRoutes />
+              </main>
+              <Footer />
+              <Suspense fallback={null}>
+                <Chatbot />
+              </Suspense>
+            </div>
+          </BrowserRouter>
+        </TooltipProvider>
+      </MuiThemeBridge>
     </ThemeProvider>
   </QueryClientProvider>
 );
