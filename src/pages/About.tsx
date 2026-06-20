@@ -301,13 +301,13 @@ const About = () => {
                   We're always looking for talented people who share our passion for great technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90">
+                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90 w-full sm:w-auto whitespace-normal">
                     <Link to="/careers">
                       View Open Positions
                       <ArrowRight className="ml-2" size={20} />
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className={outlineOnGradient}>
+                  <Button asChild size="lg" variant="outline" className={`${outlineOnGradient} w-full sm:w-auto whitespace-normal`}>
                     <Link to="/contact">Get In Touch</Link>
                   </Button>
                 </div>

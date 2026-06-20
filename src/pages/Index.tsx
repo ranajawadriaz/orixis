@@ -2,7 +2,8 @@ import { lazy, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Smartphone, Brain, Zap, Star, Sparkles, Bot } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Brain, Zap, Star, Sparkles, Bot, ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Reveal } from '@/components/motion';
 import { outlineOnGradient } from '@/lib/ui';
 import { whatsappLink } from '@/lib/site';
@@ -67,6 +68,24 @@ const Index = () => {
                 </Button>
               </div>
             </Reveal>
+
+            {/* Scroll cue: nudges visitors down to the interactive robot */}
+            <Reveal delay={0.3} className="mt-14 flex justify-center">
+              <a
+                href="#robot"
+                aria-label="Scroll down to meet Orbi, our interactive 3D robot"
+                className="group inline-flex flex-col items-center gap-2 text-orixis-text-muted transition-colors hover:text-orixis-teal"
+              >
+                <span className="text-sm font-medium">Meet Orbi, our 3D robot</span>
+                <motion.span
+                  animate={{ y: [0, 7, 0] }}
+                  transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-orixis-teal/30 bg-orixis-teal/10 transition-colors group-hover:bg-orixis-teal/20"
+                >
+                  <ChevronDown size={22} className="text-orixis-teal" />
+                </motion.span>
+              </a>
+            </Reveal>
           </div>
         </div>
 
@@ -77,7 +96,7 @@ const Index = () => {
       </section>
 
       {/* Interactive Robot Section */}
-      <section className="py-16 sm:py-20">
+      <section id="robot" className="scroll-mt-24 py-16 sm:py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <Reveal>

@@ -99,11 +99,32 @@ const Chatbot = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+              style={{ position: 'relative', width: 66, height: 66 }}
             >
+              {/* Attention pulse rings */}
+              {[0, 1].map((i) => (
+                <Box
+                  key={i}
+                  component={motion.span}
+                  aria-hidden
+                  sx={{
+                    position: 'absolute',
+                    inset: 0,
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #0D9488 0%, #7C3AED 100%)',
+                    zIndex: 0,
+                    pointerEvents: 'none',
+                  }}
+                  animate={{ scale: [1, 1.7], opacity: [0.45, 0] }}
+                  transition={{ duration: 2.2, repeat: Infinity, ease: 'easeOut', delay: i * 1.1 }}
+                />
+              ))}
               <Fab
                 aria-label="Open chat assistant"
                 onClick={() => setOpen(true)}
                 sx={{
+                  position: 'relative',
+                  zIndex: 1,
                   width: 66,
                   height: 66,
                   background: 'linear-gradient(135deg, #0D9488 0%, #7C3AED 100%)',

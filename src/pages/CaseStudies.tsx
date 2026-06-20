@@ -322,13 +322,13 @@ const CaseStudies = () => {
                   Let's discuss how we can help you achieve results like these.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90">
+                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90 w-full sm:w-auto whitespace-normal">
                     <Link to="/contact">
                       Start Your Project
                       <ArrowRight className="ml-2" size={20} />
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className={outlineOnGradient}>
+                  <Button asChild size="lg" variant="outline" className={`${outlineOnGradient} w-full sm:w-auto whitespace-normal`}>
                     <Link to="/services">View Our Services</Link>
                   </Button>
                 </div>

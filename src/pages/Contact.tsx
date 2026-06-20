@@ -222,13 +222,13 @@ const Contact = () => {
                         <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center mt-1 flex-shrink-0">
                           <info.icon className="text-white" size={20} />
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <h4 className="font-semibold text-orixis-text">{info.title}</h4>
                           {info.link ? (
                             <a
                               href={info.link}
                               {...(info.link.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                              className="text-orixis-text-muted hover:text-orixis-teal transition-colors whitespace-pre-line break-words"
+                              className="text-orixis-text-muted hover:text-orixis-teal transition-colors whitespace-pre-line break-all"
                             >
                               {info.details}
                             </a>
@@ -345,13 +345,13 @@ const Contact = () => {
                   Let's discuss how the right technology can transform your business.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90">
+                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90 w-full sm:w-auto whitespace-normal">
                     <a href={whatsappLink('Hi Orixis! I would like to schedule a consultation.')} target="_blank" rel="noopener noreferrer">
-                      Schedule a Consultation
+                      Book a Consultation
                       <ArrowRight className="ml-2" size={20} />
                     </a>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className={outlineOnGradient}>
+                  <Button asChild size="lg" variant="outline" className={`${outlineOnGradient} w-full sm:w-auto whitespace-normal`}>
                     <Link to="/case-studies">View Our Portfolio</Link>
                   </Button>
                 </div>

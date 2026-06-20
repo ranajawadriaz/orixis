@@ -325,7 +325,7 @@ const Careers = () => {
                   We're always keen to meet talented people. Send us your resume and say hello.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90">
+                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90 w-full sm:w-auto whitespace-normal">
                     <a
                       href={whatsappLink("Hi Orixis! I'd love to join your team. Here's a bit about me:\n\n• Name:\n• Role I'm interested in:\n• Portfolio / CV link:")}
                       target="_blank"
@@ -335,7 +335,7 @@ const Careers = () => {
                       <MessageCircle className="ml-2" size={20} />
                     </a>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className={outlineOnGradient}>
+                  <Button asChild size="lg" variant="outline" className={`${outlineOnGradient} w-full sm:w-auto whitespace-normal`}>
                     <Link to="/about">Learn More About Us</Link>
                   </Button>
                 </div>

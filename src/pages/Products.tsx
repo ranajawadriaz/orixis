@@ -259,13 +259,13 @@ const Products = () => {
                   Join the teams already using our products to drive growth and efficiency.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90">
+                  <Button asChild size="lg" variant="secondary" className="bg-white text-orixis-blue hover:bg-white/90 w-full sm:w-auto whitespace-normal">
                     <Link to="/contact">
                       Start Free Trial
                       <ArrowRight className="ml-2" size={20} />
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className={outlineOnGradient}>
+                  <Button asChild size="lg" variant="outline" className={`${outlineOnGradient} w-full sm:w-auto whitespace-normal`}>
                     <a href={whatsappLink('Hi Orixis! I would like to schedule a product demo.')} target="_blank" rel="noopener noreferrer">
                       Schedule Demo
                     </a>
